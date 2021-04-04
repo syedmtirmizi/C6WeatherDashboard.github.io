@@ -28,3 +28,25 @@
     margin: 10px;
     padding: 20px;
 }
+
+#location-name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#uv{
+    background-color:tomato;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.forecast{
+    background-color: lightskyblue;
+    color: white;
+    padding: 5px;
+}
+
+.date{
+    font-size: 20px;
+    font-weight: bold;
+}
