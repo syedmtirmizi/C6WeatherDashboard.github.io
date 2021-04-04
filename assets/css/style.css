@@ -44,9 +44,15 @@
     background-color: lightskyblue;
     color: white;
     padding: 5px;
+    margin: 3px;
 }
 
 .date{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.main-location{
     font-size: 20px;
     font-weight: bold;
 }
