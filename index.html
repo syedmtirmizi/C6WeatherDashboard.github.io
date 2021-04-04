@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <title>Weather Dashboard</title>
 </head>
-<body onload="console.log('hello')">
+<body onload="saveSearches()">
     <nav class="navbar navbar-dark bg-dark">
         Weather Dashboard
     </nav>
@@ -22,13 +22,19 @@
                     <h4 class="search-bar">Search for a City:</h4>
                     <div class="form-inline search-bar">
                         <input id="locationSearch" class="form-control" type="text" placeholder="City">
-                        <button onclick="locationSearch()" class="btn btn-primary my-2 my-sm-0">
+                        <button onclick="locationSearch(); saveSearches();" id="buttonclick" class="btn btn-primary my-2 my-sm-0">
                             <i class="fa fa-search" aria-hidden="true"></i>
                         </button>
                     </div>
                 </div>
-                <div class="row history-top history save-1 list-group-item">Toronto</div>
-                <div class="row history save-2 list-group-item">Brampton</div>
+                <div id= "save-0" class="row history-top history list-group-item hidden"></div>
+                <div id= "save-1" class="row history-top history list-group-item hide"></div>
+                <div id= "save-2" class="row history list-group-item hide"></div>
+                <div id= "save-3" class="row history list-group-item hide"></div>
+                <div id= "save-4" class="row history list-group-item hide"></div>
+                <div id= "save-5" class="row history list-group-item hide"></div>
+                <div id= "save-6" class="row history list-group-item hide"></div>
+                <div id= "save-7" class="row history list-group-item hide"></div>
             </div>
             <div class="col">
                 <div class="container">

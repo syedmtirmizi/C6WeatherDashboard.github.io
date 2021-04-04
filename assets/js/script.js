@@ -2,6 +2,9 @@ function locationSearch() {
     var location = document.querySelector('#locationSearch').value;
 
     console.log(location);
+    function saveSearches(a) {
+        localStorage.setItem(a, location);
+    }
 
 
     fetch(
@@ -23,10 +26,7 @@ function locationSearch() {
             return response.json();
         })
         .then(function(weatherData) {
-            console.log(weatherData);
-            // console.log(weatherData.current.temp)
-            // var locationIconEl = document.querySelector('location-icon');
-            // var getlocationIcon = document.createElement('svg');
+            // console.log(weatherData);
 
             var windSpeedEl = document.querySelector('#wind-speed');
             var uvEl = document.querySelector('#uv');
@@ -52,14 +52,14 @@ function locationSearch() {
                 var humidityEl = document.querySelector('#humidity-' + i +'')
                 var weatherIconEl = document.querySelector('#weather-icon-' + i + '');
 
-                console.log(weatherIconEl);
-                console.log(weatherData.daily[i].weather[0].icon)
+                // console.log(weatherIconEl);
+                // console.log(weatherData.daily[i].weather[0].icon)
 
 
                 temperatureEl.innerHTML = weatherData.daily[i].temp.max + "°F";
                 humidityEl.innerHTML = weatherData.daily[i].humidity +"%";
                 var icon = weatherData.daily[i].weather[0].icon 
-                console.log(icon);
+                // console.log(icon);
 
                 weatherIconEl.innerHTML = `<img src="http://openweathermap.org/img/wn/${icon}@2x.png">`;
 
@@ -72,3 +72,26 @@ function locationSearch() {
     });
 
 };
+
+
+
+function saveSearches() {
+    var location = document.querySelector('#locationSearch').value;
+    console.log(location);
+    var cities = [];
+    if (localStorage.getItem('city') == null) {
+        cities[0] = location;
+    }else {
+        cities = JSON.parse(localStorage.getItem('city'));
+        cities.push(location);
+    }
+    localStorage.setItem('city', JSON.stringify(cities));
+
+    for (var i = 0; i < cities.length; i++) {
+        console.log(cities[i]);
+        var saveEl = document.querySelector('#save-' + i +'');
+        saveEl.innerHTML = cities[i];
+        saveEl.classList.remove('hide');
+    }
+  
+}

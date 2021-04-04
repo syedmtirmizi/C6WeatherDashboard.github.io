@@ -56,3 +56,11 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.hide{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
