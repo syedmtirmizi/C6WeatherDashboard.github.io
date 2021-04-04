@@ -1,0 +1,30 @@
+.navbar{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.grid{
+    display: grid | inline-grid;
+    grid-template-columns: 90px auto;
+    grid-template-rows: auto auto;
+}
+
+.search{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    border: black 2px;
+}
+
+.picked-location{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    border: black 2px;
+}
+
+.forecast{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    border: black 2px;
+}
