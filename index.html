@@ -8,6 +8,7 @@
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
@@ -17,15 +18,27 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-3">
-                <div class="serach">Search</div>
+            <div class="col-4 left-panel">
+                <div class="row">
+                    <h4 class="search-bar">Search for a City:</h4>
+                    <form class="form-inline search-bar">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+                <div class="row history-top history save-1 list-group-item">Toronto</div>
+                <div class="row history save-2 list-group-item">Brampton</div>
             </div>
             <div class="col">
                 <div class="container">
                     <div class="row">
                         <div class="col">
                             <div class="picked-location">
-                                <div id="location">Atlanta</div>
+                                <div id="location">
+                                    <h2>Atlanta<div id="location-icon"></div></h2>
+                                </div>
                                 <div id="temperature">50C</div>
                                 <div id="wind-speed">50KM</div>
                                 <div id="uv">10</div>
@@ -54,5 +67,6 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
 </body>
 </html>
